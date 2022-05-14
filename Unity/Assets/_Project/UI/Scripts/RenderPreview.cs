@@ -90,15 +90,15 @@ namespace _Project.UI.Scripts
             if (expanded)
             {
                 expandCollapseImage.sprite = collapsedIcon;
-                windowSize.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, windowSize.rect.width / 3);
-                windowSize.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, windowSize.rect.height / 3);
+                windowSize.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, windowSize.rect.width / (float)2.5);
+                windowSize.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, windowSize.rect.height / (float)2.5);
                 UIManager.Get().RemoveEscapable(ExpandCollapse);
             }
             else
             {
                 expandCollapseImage.sprite = expandedIcon;
-                windowSize.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, windowSize.rect.width * 3);
-                windowSize.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, windowSize.rect.height * 3);
+                windowSize.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, windowSize.rect.width * (float)2.5);
+                windowSize.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, windowSize.rect.height * (float)2.5);
                 UIManager.Get().AddEscapable(ExpandCollapse);
             }
 
