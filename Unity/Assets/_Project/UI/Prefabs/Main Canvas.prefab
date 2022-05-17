@@ -2216,15 +2216,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3376818446378516399, guid: 4ffd693b457835a438d956a7e029aae2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 70
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3376818446378516399, guid: 4ffd693b457835a438d956a7e029aae2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3376818446378516399, guid: 4ffd693b457835a438d956a7e029aae2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4003679002851598795, guid: 4ffd693b457835a438d956a7e029aae2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6393436531900282272, guid: 4ffd693b457835a438d956a7e029aae2, type: 3}
       propertyPath: m_SizeDelta.y
