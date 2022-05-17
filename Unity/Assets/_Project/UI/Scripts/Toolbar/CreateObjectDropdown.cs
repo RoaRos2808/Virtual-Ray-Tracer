@@ -93,7 +93,7 @@ namespace _Project.UI.Scripts.Toolbar
                 itemButton.GetComponentInChildren<TextMeshProUGUI>().text = objectType.ToString();
                 itemButton.onClick.AddListener(() => OnClick(objectType));
             }
-            items.GetComponent<RectTransform>().sizeDelta = new Vector2(100, 30 * (objectTypes.Length + 1));
+            items.GetComponent<RectTransform>().sizeDelta = new Vector2(140, 80 * (objectTypes.Length + 1));
         }
 
         private void Update()
