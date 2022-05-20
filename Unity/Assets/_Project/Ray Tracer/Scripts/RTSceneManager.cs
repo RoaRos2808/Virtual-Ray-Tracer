@@ -475,7 +475,8 @@ namespace _Project.Ray_Tracer.Scripts
         {
             // Check if we clicked on anything (unless we are hovered over or in UI, or orbiting the camera).
             bool inUI = EventSystem.current.IsPointerOverGameObject();
-            if (Input.GetMouseButtonDown(0) && !inUI)
+            bool inUIMobile = EventSystem.current.IsPointerOverGameObject(Input.touchCount > 0 ? Input.touches[0].fingerId : -1);
+            if (Input.GetMouseButtonDown(0) && !inUI && !inUIMobile)
                 OnLeftClick();
             
             // Handle transformation type hot keys.
