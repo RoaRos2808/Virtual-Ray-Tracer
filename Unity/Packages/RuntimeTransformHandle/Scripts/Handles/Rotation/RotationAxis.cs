@@ -34,7 +34,7 @@ namespace RuntimeHandle
             MeshRenderer mr = o.AddComponent<MeshRenderer>();
             mr.material = _material;
             MeshFilter mf = o.AddComponent<MeshFilter>();
-            mf.mesh = MeshUtils.CreateTorus(2f, .04f, 32, 6);
+            mf.mesh = MeshUtils.CreateTorus(2f, .1f, 32, 6);
             MeshCollider mc = o.AddComponent<MeshCollider>();
             mc.sharedMesh = MeshUtils.CreateTorus(2f, .1f, 32, 6);
             o.transform.localRotation = Quaternion.FromToRotation(Vector3.up, _axis);

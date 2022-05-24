@@ -35,7 +35,7 @@ namespace RuntimeHandle
             if (_parentTransformHandle.axes != HandleAxes.X && _parentTransformHandle.axes != HandleAxes.Y && _parentTransformHandle.axes != HandleAxes.Z)
             {
                 _globalAxis = new GameObject().AddComponent<ScaleGlobal>()
-                    .Initialize(_parentTransformHandle, HandleBase.GetVectorFromAxes(_parentTransformHandle.axes), Color.white);
+                    .Initialize(_parentTransformHandle, HandleBase.GetVectorFromAxes(_parentTransformHandle.axes), new Color(1, 1, 1, .2f));
                 
                 _globalAxis.InteractionStart += OnGlobalInteractionStart;
                 _globalAxis.InteractionUpdate += OnGlobalInteractionUpdate;

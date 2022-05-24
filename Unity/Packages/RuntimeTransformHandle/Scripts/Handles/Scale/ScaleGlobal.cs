@@ -26,7 +26,7 @@ namespace RuntimeHandle
             MeshRenderer mr = o.AddComponent<MeshRenderer>();
             mr.material = _material;
             MeshFilter mf = o.AddComponent<MeshFilter>();
-            mf.mesh = MeshUtils.CreateBox(.4f, .4f, .4f);
+            mf.mesh = MeshUtils.CreateBox(.6f, .6f, .6f);
             MeshCollider mc = o.AddComponent<MeshCollider>();
 
             return this;

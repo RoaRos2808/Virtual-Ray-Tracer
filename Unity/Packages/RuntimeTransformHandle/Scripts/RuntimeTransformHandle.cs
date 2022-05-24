@@ -111,7 +111,7 @@ namespace RuntimeHandle
 
             if (p_axis != null && _draggingHandle == null)
             {
-                p_axis.SetColor(Color.yellow);
+                p_axis.SetColor(new Color(1, 0.92f, 0.016f, .5f));
             }
 
             _previousAxis = p_axis;
