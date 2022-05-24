@@ -32,10 +32,10 @@ namespace RuntimeHandle
             MeshRenderer mr = _handle.AddComponent<MeshRenderer>();
             mr.material = _material;
             MeshFilter mf = _handle.AddComponent<MeshFilter>();
-            mf.mesh = MeshUtils.CreateBox(.02f, .5f, 0.5f);
+            mf.mesh = MeshUtils.CreateBox(.02f, 0.8f, 0.8f);
             MeshCollider mc = _handle.AddComponent<MeshCollider>();
             _handle.transform.localRotation = Quaternion.FromToRotation(Vector3.up, _perp);
-            _handle.transform.localPosition = (_axis1 + _axis2) * .25f;
+            _handle.transform.localPosition = (_axis1 + _axis2) * .4f;
 
             return this;
         }
@@ -115,7 +115,7 @@ namespace RuntimeHandle
             if (angle2 < 90)
                 axis2 = -axis2;
 
-            _handle.transform.localPosition = (axis1 + axis2) * .25f;
+            _handle.transform.localPosition = (axis1 + axis2) * .4f;
 
             // Hide the plane if one of the angles is shallow enough. This prevents non-smooth motion.
             float threshold = _parentTransformHandle.hideHandleAngle;

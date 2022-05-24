@@ -32,7 +32,7 @@ namespace RuntimeHandle
             MeshRenderer mr = o.AddComponent<MeshRenderer>();
             mr.material = _material;
             MeshFilter mf = o.AddComponent<MeshFilter>();
-            mf.mesh = MeshUtils.CreateCone(p_axis.magnitude * SIZE, .04f, .04f, 8, 1);
+            mf.mesh = MeshUtils.CreateCone(p_axis.magnitude * SIZE, .14f, .14f, 8, 1);
             MeshCollider mc = o.AddComponent<MeshCollider>();
             mc.sharedMesh = MeshUtils.CreateCone(p_axis.magnitude * SIZE, .1f, .1f, 8, 1);
             o.transform.localRotation = Quaternion.FromToRotation(Vector3.up, p_axis);
@@ -42,7 +42,7 @@ namespace RuntimeHandle
             mr = o.AddComponent<MeshRenderer>();
             mr.material = _material;
             mf = o.AddComponent<MeshFilter>();
-            mf.mesh = MeshUtils.CreateBox(.3f, .3f, .3f);
+            mf.mesh = MeshUtils.CreateBox(.4f, .4f, .4f);
             mc = o.AddComponent<MeshCollider>();
             o.transform.localRotation = Quaternion.FromToRotation(Vector3.up, p_axis);
             o.transform.localPosition = p_axis * SIZE;

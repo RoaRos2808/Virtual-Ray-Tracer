@@ -31,9 +31,9 @@ namespace RuntimeHandle
             MeshRenderer mr = o.AddComponent<MeshRenderer>();
             mr.material = _material;
             MeshFilter mf = o.AddComponent<MeshFilter>();
-            mf.mesh = MeshUtils.CreateCone(2f, .04f, .04f, 8, 1);
+            mf.mesh = MeshUtils.CreateCone(2f, .14f, .14f, 8, 1);
             MeshCollider mc = o.AddComponent<MeshCollider>();
-            mc.sharedMesh = MeshUtils.CreateCone(2f, .1f, .1f, 8, 1);
+            mc.sharedMesh = MeshUtils.CreateCone(10f, .1f, .1f, 8, 1);
             o.transform.localRotation = Quaternion.FromToRotation(Vector3.up, p_axis);
 
             o = new GameObject();
@@ -41,7 +41,7 @@ namespace RuntimeHandle
             mr = o.AddComponent<MeshRenderer>();
             mr.material = _material;
             mf = o.AddComponent<MeshFilter>();
-            mf.mesh = MeshUtils.CreateCone(.4f, .2f, .0f, 8, 1);
+            mf.mesh = MeshUtils.CreateCone(.4f, .25f, .0f, 8, 1);
             mc = o.AddComponent<MeshCollider>();
             o.transform.localRotation = Quaternion.FromToRotation(Vector3.up, _axis);
             o.transform.localPosition = p_axis * 2;
