@@ -9,7 +9,7 @@ namespace RuntimeHandle
      */
     public class ScaleAxis : HandleBase
     {
-        private const float SIZE = 2;
+        private const float SIZE = 4;
         
         private Vector3 _axis;
         private Vector3 _perp;
@@ -32,9 +32,9 @@ namespace RuntimeHandle
             MeshRenderer mr = o.AddComponent<MeshRenderer>();
             mr.material = _material;
             MeshFilter mf = o.AddComponent<MeshFilter>();
-            mf.mesh = MeshUtils.CreateCone(p_axis.magnitude * SIZE, .14f, .14f, 8, 1);
+            mf.mesh = MeshUtils.CreateCone(p_axis.magnitude * SIZE, .2f, .2f, 8, 1);
             MeshCollider mc = o.AddComponent<MeshCollider>();
-            mc.sharedMesh = MeshUtils.CreateCone(p_axis.magnitude * SIZE, .1f, .1f, 8, 1);
+            mc.sharedMesh = MeshUtils.CreateCone(p_axis.magnitude * SIZE, .4f, .4f, 8, 1);
             o.transform.localRotation = Quaternion.FromToRotation(Vector3.up, p_axis);
 
             o = new GameObject();
@@ -42,7 +42,7 @@ namespace RuntimeHandle
             mr = o.AddComponent<MeshRenderer>();
             mr.material = _material;
             mf = o.AddComponent<MeshFilter>();
-            mf.mesh = MeshUtils.CreateBox(.4f, .4f, .4f);
+            mf.mesh = MeshUtils.CreateBox(.6f, .6f, .6f);
             mc = o.AddComponent<MeshCollider>();
             o.transform.localRotation = Quaternion.FromToRotation(Vector3.up, p_axis);
             o.transform.localPosition = p_axis * SIZE;
