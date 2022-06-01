@@ -99,7 +99,7 @@ namespace _Project.Scripts
                 xDistance = -Input.GetAxis("Mouse X") * 0.01f;
                 yDistance = -Input.GetAxis("Mouse Y") * 0.01f;
             } 
-            else if (Input.touchCount > 0)
+            else if (Input.touchCount == 1)
             {
                 xDistance = -Input.touches[0].deltaPosition.x * 0.0005f;
                 yDistance = -Input.touches[0].deltaPosition.y * 0.0005f;
@@ -123,7 +123,7 @@ namespace _Project.Scripts
 
             if (!(Input.GetMouseButton(2) ||
                   Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) ||
-                  Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.touchCount > 0))
+                  Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.touchCount == 1))
             {
                 panning = false;
                 DisableBlocker();
@@ -218,12 +218,42 @@ namespace _Project.Scripts
             if ((inUI || inUIMobile) && !InputBlockerHovered)
                 return;
 
-            if (!rTSceneManager.selection.Empty)
-                return;
             // The inputs are below this line
 
             // If scrollWheel is used change zoom. This one is not exclusive.
             distance -= Input.GetAxis("Mouse ScrollWheel") * ZoomSpeed * Mathf.Abs(distance);
+
+            if (Input.touchCount == 2)
+            {
+                float xTouch1;
+                float xTouch2;
+                float yTouch1;
+                float yTouch2;
+                if (Input.touches[0].position.y > Input.touches[1].position.y)
+                {
+                    yTouch1 = Input.touches[0].deltaPosition.y;
+                    yTouch2 = Input.touches[1].deltaPosition.y;
+                }
+                else
+                {
+                    yTouch1 = Input.touches[1].deltaPosition.y;
+                    yTouch2 = Input.touches[0].deltaPosition.y;
+                }
+                if (Input.touches[0].position.x > Input.touches[1].position.x)
+                {
+                    xTouch1 = Input.touches[0].deltaPosition.x;
+                    xTouch2 = Input.touches[1].deltaPosition.x;
+                }
+                else
+                {
+                    xTouch1 = Input.touches[1].deltaPosition.x;
+                    xTouch2 = Input.touches[0].deltaPosition.x;
+                }
+
+
+                distance -= ((yTouch1 - yTouch2) + (xTouch1 - xTouch2))/1.5f * ZoomSpeed * 0.0008f * Mathf.Abs(distance);
+                return;
+            }
 
             // If the left control is pressed and.... 
             if (Input.GetKey(KeyCode.LeftControl))
@@ -247,8 +277,12 @@ namespace _Project.Scripts
                     return;
                 }
             }
-        
-            // If the middle mouse is pressed, or the arrow keys we activate panning.
+
+            // If an object is selected, block user from panning/orbiting
+            if (!rTSceneManager.selection.Empty)
+                return;
+
+            // If the middle mouse is pressed, the arrow keys are pressed, or the device is controlled with one touch we activate panning.
             if (Input.GetMouseButtonDown(2) || Input.GetKeyDown(KeyCode.LeftArrow) ||
                 Input.GetKeyDown(KeyCode.RightArrow) ||
                 Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.touchCount == 1) 
