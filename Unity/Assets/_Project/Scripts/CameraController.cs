@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using _Project.Ray_Tracer.Scripts;
 
 namespace _Project.Scripts
 {
@@ -12,6 +13,7 @@ namespace _Project.Scripts
         [SerializeField]
         private RectTransform inputBlocker;
         public bool InputBlockerHovered { get; set; }
+        public RTSceneManager rTSceneManager;
     
         public Transform Target;
         public float InitialDistance = 5.0f;
@@ -90,12 +92,17 @@ namespace _Project.Scripts
         {
             float xDistance = 0.0f;
             float yDistance = 0.0f;
-            
+
             // Grab the rotation of the camera so we can move in a pseudo local XY space.
             if (Input.GetMouseButton(2))
             {
                 xDistance = -Input.GetAxis("Mouse X") * 0.01f;
                 yDistance = -Input.GetAxis("Mouse Y") * 0.01f;
+            } 
+            else if (Input.touchCount > 0)
+            {
+                xDistance = -Input.touches[0].deltaPosition.x * 0.0005f;
+                yDistance = -Input.touches[0].deltaPosition.y * 0.0005f;
             }
 
             // And we pan with the arrow keys
@@ -116,7 +123,7 @@ namespace _Project.Scripts
 
             if (!(Input.GetMouseButton(2) ||
                   Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) ||
-                  Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)))
+                  Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.touchCount > 0))
             {
                 panning = false;
                 DisableBlocker();
@@ -205,11 +212,16 @@ namespace _Project.Scripts
                 mode = false;
             }
 
-            if (EventSystem.current.IsPointerOverGameObject() && !InputBlockerHovered)
+            bool inUI = EventSystem.current.IsPointerOverGameObject();
+            bool inUIMobile = EventSystem.current.IsPointerOverGameObject(Input.touchCount > 0 ? Input.touches[0].fingerId : -1);
+
+            if ((inUI || inUIMobile) && !InputBlockerHovered)
                 return;
 
+            if (!rTSceneManager.selection.Empty)
+                return;
             // The inputs are below this line
-        
+
             // If scrollWheel is used change zoom. This one is not exclusive.
             distance -= Input.GetAxis("Mouse ScrollWheel") * ZoomSpeed * Mathf.Abs(distance);
 
@@ -239,7 +251,7 @@ namespace _Project.Scripts
             // If the middle mouse is pressed, or the arrow keys we activate panning.
             if (Input.GetMouseButtonDown(2) || Input.GetKeyDown(KeyCode.LeftArrow) ||
                 Input.GetKeyDown(KeyCode.RightArrow) ||
-                Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
+                Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.touchCount == 1) 
             {
                 inputBlocker.gameObject.SetActive(true);
                 panning = true;
