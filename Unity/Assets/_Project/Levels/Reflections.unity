@@ -4269,6 +4269,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 64819478}
+    - target: {fileID: 1784244273977784406, guid: 02605105daade514eb8724e4348cab10, type: 3}
+      propertyPath: rTSceneManager
+      value: 
+      objectReference: {fileID: 1249853172}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02605105daade514eb8724e4348cab10, type: 3}
 --- !u!20 &1491874955 stripped
