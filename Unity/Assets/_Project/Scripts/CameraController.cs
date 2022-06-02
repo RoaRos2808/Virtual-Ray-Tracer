@@ -137,7 +137,17 @@ namespace _Project.Scripts
                 xDegrees += Input.GetAxis("Mouse X") * OrbitSpeed;
                 yDegrees -= Input.GetAxis("Mouse Y") * OrbitSpeed;
             }
-            
+            else if (Input.touchCount == 3 /*&& (
+                (Input.touches[0].deltaPosition.y > 0 && Input.touches[1].deltaPosition.y > 0) ||
+                (Input.touches[0].deltaPosition.y < 0 && Input.touches[1].deltaPosition.y < 0) ||
+                (Input.touches[0].deltaPosition.x > 0 && Input.touches[1].deltaPosition.x > 0) ||
+                (Input.touches[0].deltaPosition.x < 0 && Input.touches[1].deltaPosition.x < 0))*/)
+            {
+                xDegrees += Input.touches[0].deltaPosition.x * 0.0005f;
+                yDegrees -= Input.touches[0].deltaPosition.y * 0.0005f;
+            }
+
+
             if (Input.GetKey(KeyCode.LeftArrow))
                 xDegrees += Time.deltaTime * 20.0f * OrbitSpeed;
             if (Input.GetKey(KeyCode.RightArrow))
@@ -160,12 +170,12 @@ namespace _Project.Scripts
 
             if (!(Input.GetMouseButton(0) ||
                   Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) ||
-                  Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)))
+                  Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.touchCount == 2))
             {
                 orbiting = false;
                 DisableBlocker();
             }
-
+            
         }
     
         private void OnlyOneInputPicker()
@@ -189,6 +199,43 @@ namespace _Project.Scripts
                     DisableBlocker();
                 }
 
+                return;
+            }
+
+            // zoom for mobile
+            if (Input.touchCount == 2 && (
+                (Input.touches[0].deltaPosition.y > 0 && Input.touches[1].deltaPosition.y < 0) ||
+                (Input.touches[0].deltaPosition.y < 0 && Input.touches[1].deltaPosition.y > 0) ||
+                (Input.touches[0].deltaPosition.x > 0 && Input.touches[1].deltaPosition.x < 0) ||
+                (Input.touches[0].deltaPosition.x < 0 && Input.touches[1].deltaPosition.x > 0)))
+            {
+                float xTouch1;
+                float xTouch2;
+                float yTouch1;
+                float yTouch2;
+                if (Input.touches[0].position.y > Input.touches[1].position.y)
+                {
+                    yTouch1 = Input.touches[0].deltaPosition.y;
+                    yTouch2 = Input.touches[1].deltaPosition.y;
+                }
+                else
+                {
+                    yTouch1 = Input.touches[1].deltaPosition.y;
+                    yTouch2 = Input.touches[0].deltaPosition.y;
+                }
+                if (Input.touches[0].position.x > Input.touches[1].position.x)
+                {
+                    xTouch1 = Input.touches[0].deltaPosition.x;
+                    xTouch2 = Input.touches[1].deltaPosition.x;
+                }
+                else
+                {
+                    xTouch1 = Input.touches[1].deltaPosition.x;
+                    xTouch2 = Input.touches[0].deltaPosition.x;
+                }
+
+
+                distance -= ((yTouch1 - yTouch2) + (xTouch1 - xTouch2)) / 1.5f * ZoomSpeed * 0.0008f * Mathf.Abs(distance);
                 return;
             }
 
@@ -223,37 +270,6 @@ namespace _Project.Scripts
             // If scrollWheel is used change zoom. This one is not exclusive.
             distance -= Input.GetAxis("Mouse ScrollWheel") * ZoomSpeed * Mathf.Abs(distance);
 
-            if (Input.touchCount == 2)
-            {
-                float xTouch1;
-                float xTouch2;
-                float yTouch1;
-                float yTouch2;
-                if (Input.touches[0].position.y > Input.touches[1].position.y)
-                {
-                    yTouch1 = Input.touches[0].deltaPosition.y;
-                    yTouch2 = Input.touches[1].deltaPosition.y;
-                }
-                else
-                {
-                    yTouch1 = Input.touches[1].deltaPosition.y;
-                    yTouch2 = Input.touches[0].deltaPosition.y;
-                }
-                if (Input.touches[0].position.x > Input.touches[1].position.x)
-                {
-                    xTouch1 = Input.touches[0].deltaPosition.x;
-                    xTouch2 = Input.touches[1].deltaPosition.x;
-                }
-                else
-                {
-                    xTouch1 = Input.touches[1].deltaPosition.x;
-                    xTouch2 = Input.touches[0].deltaPosition.x;
-                }
-
-
-                distance -= ((yTouch1 - yTouch2) + (xTouch1 - xTouch2))/1.5f * ZoomSpeed * 0.0008f * Mathf.Abs(distance);
-                return;
-            }
 
             // If the left control is pressed and.... 
             if (Input.GetKey(KeyCode.LeftControl))
@@ -276,6 +292,12 @@ namespace _Project.Scripts
                     GlobalSettings.Get().SetCursor(CursorType.RotateCursor);
                     return;
                 }
+            }
+
+            if (Input.touchCount == 3)
+            {
+                orbiting = true;
+                return;
             }
 
             // If an object is selected, block user from panning/orbiting
