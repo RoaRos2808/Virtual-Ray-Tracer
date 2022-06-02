@@ -238,8 +238,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 768.4712, y: -189.83}
-  m_SizeDelta: {x: 1496.9424, y: 0}
+  m_AnchoredPosition: {x: 819.4338, y: -189.83}
+  m_SizeDelta: {x: 1598.8676, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &404699062
 GameObject:
@@ -273,8 +273,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 768.4712, y: -452.45}
-  m_SizeDelta: {x: 1496.9424, y: 0}
+  m_AnchoredPosition: {x: 819.4338, y: -452.45}
+  m_SizeDelta: {x: 1598.8676, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &527525842
 GameObject:
@@ -310,8 +310,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 768.4712, y: -482.56}
-  m_SizeDelta: {x: 1496.9424, y: 40.22}
+  m_AnchoredPosition: {x: 819.4338, y: -482.56}
+  m_SizeDelta: {x: 1598.8676, y: 40.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &527525844
 MonoBehaviour:
@@ -444,8 +444,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 768.4712, y: -567.47504}
-  m_SizeDelta: {x: 1496.9424, y: 109.61}
+  m_AnchoredPosition: {x: 819.4338, y: -567.47504}
+  m_SizeDelta: {x: 1598.8676, y: 109.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &728888729
 MonoBehaviour:
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The last button in the top right menu bar is now available to you! If
+  m_text: 'The last button in the bottom left menu bar is now available to you! If
     you click this button a drop-down menu will appear listing the different types
     of objects you can add to the scene. When choosing one of these objects the menu
     will close again and the object will appear at the centre of the scene ready
@@ -587,8 +587,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 768.4712, y: -219.94}
-  m_SizeDelta: {x: 1496.9424, y: 40.22}
+  m_AnchoredPosition: {x: 819.4338, y: -219.94}
+  m_SizeDelta: {x: 1598.8676, y: 40.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &859849906
 MonoBehaviour:
@@ -1375,7 +1375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3770574504227641030, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1496.9424
+      value: 1598.8676
       objectReference: {fileID: 0}
     - target: {fileID: 3770574504227641030, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1383,7 +1383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3770574504227641030, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 768.4712
+      value: 819.4338
       objectReference: {fileID: 0}
     - target: {fileID: 3770574504227641030, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2545,7 +2545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8295274377048907396, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1496.9424
+      value: 1598.8676
       objectReference: {fileID: 0}
     - target: {fileID: 8295274377048907396, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2553,7 +2553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8295274377048907396, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 768.4712
+      value: 819.4338
       objectReference: {fileID: 0}
     - target: {fileID: 8295274377048907396, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2787,8 +2787,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 768.4712, y: -346.25}
-  m_SizeDelta: {x: 1496.9424, y: 192.4}
+  m_AnchoredPosition: {x: 819.4338, y: -346.25}
+  m_SizeDelta: {x: 1598.8676, y: 192.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1937440508
 MonoBehaviour:
