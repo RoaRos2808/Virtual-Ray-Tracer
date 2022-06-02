@@ -919,7 +919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1958
+      value: 3017
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_SizeDelta.y
@@ -955,7 +955,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 987
+      value: 1516.5
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -981,24 +981,19 @@ PrefabInstance:
 
 
         With an object selected you can directly
-        edit its postion, rotation and scale through the properties panel, but you
+        edit its position, rotation and scale through the properties panel, but you
         can also use the gizmos shown on any selected object. Clicking and dragging
         these gizmos will move, rotate or scale the object.
 
 
         To change whether
         the gizmos move, rotate or scale you can select the transformation type from
-        the dropdown in the top left or use the keys T, R and S.
+        the dropdown in the bottom left.
 
 
-        To change
-        whether the gizmos work in global or local space you can the select the transformation
-        space from the dropdown in the top left or use the tab key.
-
-
-        You
-        can snap the transformation to discreet increments by holding the left shift
-        key.'
+        To change whether the gizmos work
+        in global or local space you can the select the transformation space from
+        the dropdown in the bottom left.'
       objectReference: {fileID: 0}
     - target: {fileID: 3712290806099628232, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_fontSize
@@ -1148,7 +1143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1958
+      value: 3017
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1184,7 +1179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 987
+      value: 1516.5
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1369,7 +1364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1958
+      value: 3017
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1405,7 +1400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 987
+      value: 1516.5
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1425,7 +1420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3712290806099628232, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_text
-      value: The last button in the top right menu bar (enabled in sandbox mode)
+      value: The last button in the bottom left menu bar (enabled in sandbox mode)
         allows you to add objects to the scene. If you click this button a drop-down
         menu will appear listing the different types of objects you can add to the
         scene. When choosing one of these objects the menu will close again and the
@@ -1705,7 +1700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1958
+      value: 3017
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1741,7 +1736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 987
+      value: 1516.5
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1920,7 +1915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1958
+      value: 3017
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1956,7 +1951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 987
+      value: 1516.5
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1976,18 +1971,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3712290806099628232, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_text
-      value: 'You can pan the camera by holding the middle mouse button and then
-        dragging or by pressing the arrow keys.
-
-
-        You can orbit the camera
-        by holding the left mouse button and left control and then dragging or by
-        holding left control and pressing the arrow keys.
-
-
-        You can zoom
-        the camera in and out by scrolling or by holding the right mouse button and
-        left control and then dragging.'
+      value: "You can pan the camera by dragging your finger across the screen.\n\nYou
+        can zoom the camera in and out by pinching in/out with the use of two fingers.
+        \n\nYou can orbit the camera by dragging three fingers across the screen
+        in the direction you want to orbit. "
       objectReference: {fileID: 0}
     - target: {fileID: 3712290806099628232, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_fontSize
@@ -2141,7 +2128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1958
+      value: 3017
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2177,7 +2164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 987
+      value: 1516.5
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2362,7 +2349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1958
+      value: 3017
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2398,7 +2385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 987
+      value: 1516.5
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2576,7 +2563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1958
+      value: 3017
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2612,7 +2599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 987
+      value: 1516.5
       objectReference: {fileID: 0}
     - target: {fileID: 3373495415687728066, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2632,17 +2619,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3712290806099628232, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_text
-      value: "You can select the camera, lights and objects in the scene by left-clicking
+      value: "You can select the camera, lights and objects in the scene by clicking
         on them. This will highlight the selected object and open a properties panel
         on the right-hand side. In this panel, you can edit the properties of the
-        selected object such as the colour. \n\nTo deselect an object you can press
-        ESC or left click on any empty part of the scene. When nothing is selected,
-        the general properties panel is open. There you can edit the properties of
-        the ray tracer and the visualization.\n\nIt also is possible to select the
-        rays contributing to a pixel by clicking on the pixel in the render preview
-        in the bottom right. When a ray is selected all other rays are hidden, this
-        is useful if you want to track the path of a particular ray. Deselecting
-        the ray is done by clicking on the pixel in the render preview again."
+        selected object such as the colour. \n\nTo deselect an object you can click
+        on any empty part of the scene. When nothing is selected, the general properties
+        panel is open. There you can edit the properties of the ray tracer and the
+        visualization.\n\nIt also is possible to select the rays contributing to
+        a pixel by clicking on the pixel in the render preview in the bottom right.
+        When a ray is selected all other rays are hidden, this is useful if you want
+        to track the path of a particular ray. Deselecting the ray is done by clicking
+        on the pixel in the render preview again."
       objectReference: {fileID: 0}
     - target: {fileID: 3712290806099628232, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_fontSize
