@@ -153,10 +153,10 @@ RectTransform:
   m_Father: {fileID: 785097659}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 768.4712, y: -549.49}
-  m_SizeDelta: {x: 1496.9424, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &64819477
 GameObject:
@@ -220,10 +220,10 @@ RectTransform:
   m_Father: {fileID: 785097659}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 768.4712, y: -372.16998}
-  m_SizeDelta: {x: 1496.9424, y: 40.22}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &266590709
 MonoBehaviour:
@@ -488,10 +488,10 @@ RectTransform:
   m_Father: {fileID: 785097659}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 768.4712, y: -342.06}
-  m_SizeDelta: {x: 1496.9424, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &956554176
 PrefabInstance:
@@ -1122,7 +1122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3770574504227641030, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1496.9424
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3770574504227641030, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1130,7 +1130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3770574504227641030, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 768.4712
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3770574504227641030, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2130,7 +2130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296055382296025388, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7326758892596105784, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_Interactable
@@ -2334,19 +2334,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8295274377048907396, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1496.9424
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8295274377048907396, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 109.61
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8295274377048907396, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 768.4712
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8295274377048907396, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -125.025
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8334105700365270072, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: interactable
@@ -2425,10 +2425,10 @@ PrefabInstance:
       value: Thank you for trying out this demo of our application. In this first
         scene we want to familiarize you with the basics of how to use the application. 
         All the information shown below is also available in the help menu which
-        can be accessed via the "help" button in the top left or by pressing F1,
-        so don't worry about having to memorize everything in one go. Once you are
-        ready to move on to the next scene you can press ESC to open the main menu
-        and then click the "Next Level" button.
+        can be accessed via the "Help" button in the top left, so don't worry about
+        having to memorize everything in one go. Once you are ready to move on to
+        the next scene you can press the "Main Menu" button in the top left to open
+        the main menu and then click the "Next Level" button.
       objectReference: {fileID: 0}
     - target: {fileID: 8833616608997001579, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2577,10 +2577,10 @@ RectTransform:
   m_Father: {fileID: 785097659}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 768.4712, y: -579.6}
-  m_SizeDelta: {x: 1496.9424, y: 40.22}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1100355109
 MonoBehaviour:
@@ -2782,10 +2782,10 @@ RectTransform:
   m_Father: {fileID: 785097659}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 768.4712, y: -189.83}
-  m_SizeDelta: {x: 1496.9424, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1249853171
 PrefabInstance:
@@ -3204,10 +3204,10 @@ RectTransform:
   m_Father: {fileID: 785097659}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 768.4712, y: -219.94}
-  m_SizeDelta: {x: 1496.9424, y: 40.22}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618098370
 MonoBehaviour:
@@ -3399,10 +3399,10 @@ RectTransform:
   m_Father: {fileID: 785097659}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 768.4712, y: -678.31494}
-  m_SizeDelta: {x: 1496.9424, y: 137.21}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1703648436
 MonoBehaviour:
@@ -3430,11 +3430,8 @@ MonoBehaviour:
     and scale through the properties panel, but you can also use the gizmos shown
     on any selected object. Clicking and dragging these gizmos will move, rotate
     or scale the object. To change whether the gizmos move, rotate or scale you can
-    select the transformation type from the dropdown in the top left or use the keys
-    T, R and S. There is also a dropdown to select whether the gizmos work in local
-    or global space, you can also toggle between the two by pressing the tab key.
-    You can snap the transformation to discreet increments by holding the left shift
-    key.
+    select the transformation type from the dropdown in the bottom left. There is
+    also a dropdown to select whether the gizmos work in local or global space.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3543,10 +3540,10 @@ RectTransform:
   m_Father: {fileID: 785097659}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 768.4712, y: -291.055}
-  m_SizeDelta: {x: 1496.9424, y: 82.01}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1774322711
 MonoBehaviour:
@@ -3568,11 +3565,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You can pan the camera by holding the middle mouse button and then dragging
-    or by pressing the arrow keys. You can orbit the camera by holding the left mouse
-    button and left control and then dragging or by holding left control and pressing
-    the arrow keys. You can zoom the camera in and out by scrolling or by holding
-    the right mouse button and left control and then dragging.
+  m_text: 'You can pan the camera by dragging your finger across the screen. You
+    can zoom the camera in and out by pinching in/out with the use of  two fingers.
+    You can orbit the camera by dragging three fingers across the screen in the direction
+    you want to orbit. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3827,10 +3823,10 @@ RectTransform:
   m_Father: {fileID: 785097659}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 768.4712, y: -470.885}
-  m_SizeDelta: {x: 1496.9424, y: 137.21}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2091649063
 MonoBehaviour:
@@ -3852,15 +3848,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You can select the camera, lights and objects in the scene by left-clicking
+  m_text: You can select the camera, lights and objects in the scene by clicking
     on them. This will highlight the selected object and open a properties panel
     on the right-hand side. In this panel, you can edit the properties of the selected
-    object such as the colour. To deselect an object you can press ESC or left-click
-    on an empty part of the scene. When nothing is selected, the general properties
-    panel is open. There you can edit the properties of the ray tracer and the visualization.
-    To keep things simple for now a lot of properties have been disabled so that
-    they cannot be edited, but feel free to experiment with those that are enabled.
-    All properties have tooltips explaining what they do.
+    object such as the colour. To deselect an object, click on an empty part of the
+    scene. When nothing is selected, the general properties panel is open. There
+    you can edit the properties of the ray tracer and the visualization. To keep
+    things simple for now a lot of properties have been disabled so that they cannot
+    be edited, but feel free to experiment with those that are enabled. All properties
+    have tooltips explaining what they do. You can make these tooltips pop up by
+    long-pressing a property in the panel on the right hand side.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
