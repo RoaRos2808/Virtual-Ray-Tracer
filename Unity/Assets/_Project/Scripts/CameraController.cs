@@ -137,11 +137,7 @@ namespace _Project.Scripts
                 xDegrees += Input.GetAxis("Mouse X") * OrbitSpeed;
                 yDegrees -= Input.GetAxis("Mouse Y") * OrbitSpeed;
             }
-            else if (Input.touchCount == 3 /*&& (
-                (Input.touches[0].deltaPosition.y > 0 && Input.touches[1].deltaPosition.y > 0) ||
-                (Input.touches[0].deltaPosition.y < 0 && Input.touches[1].deltaPosition.y < 0) ||
-                (Input.touches[0].deltaPosition.x > 0 && Input.touches[1].deltaPosition.x > 0) ||
-                (Input.touches[0].deltaPosition.x < 0 && Input.touches[1].deltaPosition.x < 0))*/)
+            else if (Input.touchCount == 1)
             {
                 xDegrees += Input.touches[0].deltaPosition.x * 0.0005f;
                 yDegrees -= Input.touches[0].deltaPosition.y * 0.0005f;
@@ -170,7 +166,7 @@ namespace _Project.Scripts
 
             if (!(Input.GetMouseButton(0) ||
                   Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) ||
-                  Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.touchCount == 2))
+                  Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.touchCount == 1))
             {
                 orbiting = false;
                 DisableBlocker();
@@ -294,10 +290,16 @@ namespace _Project.Scripts
                 }
             }
 
-            if (Input.touchCount == 3)
+            for (int i = 0; i < Input.touchCount; i++)
             {
-                orbiting = true;
-                return;
+                if (Input.GetTouch(i).phase == TouchPhase.Began)
+                {
+                    if (Input.GetTouch(i).tapCount == 2)
+                    {
+                        orbiting = true;
+                        return;
+                    }
+                }
             }
 
             // If an object is selected, block user from panning/orbiting
