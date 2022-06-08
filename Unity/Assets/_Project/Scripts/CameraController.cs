@@ -182,7 +182,13 @@ namespace _Project.Scripts
                 inputBlocker.gameObject.SetActive(true);
                 mode = true;
             }
-        
+
+            bool inUI = EventSystem.current.IsPointerOverGameObject();
+            bool inUIMobile = EventSystem.current.IsPointerOverGameObject(Input.touchCount > 0 ? Input.touches[0].fingerId : -1);
+
+            if ((inUI || inUIMobile) && !InputBlockerHovered)
+                return;
+
             // If the user is zooming, orbiting or panning we calculate their position
 
             if (zoom)
@@ -254,12 +260,6 @@ namespace _Project.Scripts
                 InputBlockerHovered = false;
                 mode = false;
             }
-
-            bool inUI = EventSystem.current.IsPointerOverGameObject();
-            bool inUIMobile = EventSystem.current.IsPointerOverGameObject(Input.touchCount > 0 ? Input.touches[0].fingerId : -1);
-
-            if ((inUI || inUIMobile) && !InputBlockerHovered)
-                return;
 
             // The inputs are below this line
 

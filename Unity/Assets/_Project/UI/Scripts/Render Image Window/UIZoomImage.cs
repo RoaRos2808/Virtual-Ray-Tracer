@@ -21,6 +21,49 @@ namespace _Project.UI.Scripts.Render_Image_Window
             initialScale = transform.localScale;
         }
 
+        void Update()
+        {
+            // Zooming for mobile
+            if (Input.touchCount == 2 && (
+                (Input.touches[0].deltaPosition.y > 0 && Input.touches[1].deltaPosition.y < 0) ||
+                (Input.touches[0].deltaPosition.y < 0 && Input.touches[1].deltaPosition.y > 0) ||
+                (Input.touches[0].deltaPosition.x > 0 && Input.touches[1].deltaPosition.x < 0) ||
+                (Input.touches[0].deltaPosition.x < 0 && Input.touches[1].deltaPosition.x > 0)))
+            {
+                float xTouch1;
+                float xTouch2;
+                float yTouch1;
+                float yTouch2;
+                if (Input.touches[0].position.y > Input.touches[1].position.y)
+                {
+                    yTouch1 = Input.touches[0].deltaPosition.y;
+                    yTouch2 = Input.touches[1].deltaPosition.y;
+                }
+                else
+                {
+                    yTouch1 = Input.touches[1].deltaPosition.y;
+                    yTouch2 = Input.touches[0].deltaPosition.y;
+                }
+                if (Input.touches[0].position.x > Input.touches[1].position.x)
+                {
+                    xTouch1 = Input.touches[0].deltaPosition.x;
+                    xTouch2 = Input.touches[1].deltaPosition.x;
+                }
+                else
+                {
+                    xTouch1 = Input.touches[1].deltaPosition.x;
+                    xTouch2 = Input.touches[0].deltaPosition.x;
+                }
+
+                var delta = Vector3.one * (((yTouch1 - yTouch2) + (xTouch1 - xTouch2)) / 1.5f) * zoomSpeed * 0.08f;
+                var desiredScale = transform.localScale + delta;
+
+                desiredScale = ClampDesiredScale(desiredScale);
+
+                transform.localScale = desiredScale;
+            }
+        }
+
         public void OnScroll(PointerEventData eventData)
         {
             var delta = Vector3.one * (eventData.scrollDelta.y * zoomSpeed);
