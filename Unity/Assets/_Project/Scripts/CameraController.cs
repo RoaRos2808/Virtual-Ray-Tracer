@@ -201,21 +201,6 @@ namespace _Project.Scripts
                 return;
             }
 
-            if (orbiting)
-            {
-                OrbitingUpdate();
-                return;
-            }
-        
-            if (panning)
-            {
-                PanningUpdate();
-                return;
-            }
-
-            if ((inUI || inUIMobile) && !InputBlockerHovered)
-                return;
-
             // zoom for mobile
             if (Input.touchCount == 2 && (
                 (Input.touches[0].deltaPosition.y > 0 && Input.touches[1].deltaPosition.y < 0) ||
@@ -223,6 +208,8 @@ namespace _Project.Scripts
                 (Input.touches[0].deltaPosition.x > 0 && Input.touches[1].deltaPosition.x < 0) ||
                 (Input.touches[0].deltaPosition.x < 0 && Input.touches[1].deltaPosition.x > 0)))
             {
+                if ((inUI || inUIMobile) && !InputBlockerHovered)
+                    return;
                 float xTouch1;
                 float xTouch2;
                 float yTouch1;
@@ -252,6 +239,22 @@ namespace _Project.Scripts
 
                 return;
             }
+
+            if (orbiting)
+            {
+                OrbitingUpdate();
+                return;
+            }
+        
+            if (panning)
+            {
+                PanningUpdate();
+                return;
+            }
+
+            if ((inUI || inUIMobile) && !InputBlockerHovered)
+                return;
+
 
             if (mode && !Input.GetKey(KeyCode.LeftControl))
             {
