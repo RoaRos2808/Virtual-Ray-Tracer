@@ -201,19 +201,28 @@ namespace _Project.Scripts
                 return;
             }
 
+            if (orbiting)
+            {
+                OrbitingUpdate();
+                return;
+            }
+        
+            if (panning)
+            {
+                PanningUpdate();
+                return;
+            }
+
+            if ((inUI || inUIMobile) && !InputBlockerHovered)
+                return;
+
             // zoom for mobile
-            if (zoomMobile && (
+            if (Input.touchCount == 2 && (
                 (Input.touches[0].deltaPosition.y > 0 && Input.touches[1].deltaPosition.y < 0) ||
                 (Input.touches[0].deltaPosition.y < 0 && Input.touches[1].deltaPosition.y > 0) ||
                 (Input.touches[0].deltaPosition.x > 0 && Input.touches[1].deltaPosition.x < 0) ||
                 (Input.touches[0].deltaPosition.x < 0 && Input.touches[1].deltaPosition.x > 0)))
             {
-                if (Input.touchCount != 2)
-                {
-                    zoomMobile = false;
-                    return;
-                }
-
                 float xTouch1;
                 float xTouch2;
                 float yTouch1;
@@ -240,23 +249,9 @@ namespace _Project.Scripts
                 }
 
                 distance -= ((yTouch1 - yTouch2) + (xTouch1 - xTouch2)) / 1.5f * ZoomSpeed * 0.0008f * Mathf.Abs(distance);
-                return;
-            }
 
-            if (orbiting)
-            {
-                OrbitingUpdate();
                 return;
             }
-        
-            if (panning)
-            {
-                PanningUpdate();
-                return;
-            }
-
-            if ((inUI || inUIMobile) && !InputBlockerHovered)
-                return;
 
             if (mode && !Input.GetKey(KeyCode.LeftControl))
             {
@@ -270,13 +265,6 @@ namespace _Project.Scripts
 
             // If scrollWheel is used change zoom. This one is not exclusive.
             distance -= Input.GetAxis("Mouse ScrollWheel") * ZoomSpeed * Mathf.Abs(distance);
-
-            if (Input.touchCount == 2)
-            {
-                zoomMobile = true;
-                return;
-            }
-
 
             // If the left control is pressed and.... 
             if (Input.GetKey(KeyCode.LeftControl))
