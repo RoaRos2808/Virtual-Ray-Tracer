@@ -33,6 +33,7 @@ namespace _Project.Scripts
         private bool orbiting = false;
         private bool panning = false;
         private bool mode = false;
+        private bool zoomMobile = false;
 
         void Start() { Initialize(); }
 
@@ -176,18 +177,14 @@ namespace _Project.Scripts
     
         private void OnlyOneInputPicker()
         {
+            bool inUI = EventSystem.current.IsPointerOverGameObject();
+            bool inUIMobile = EventSystem.current.IsPointerOverGameObject(Input.touchCount > 0 ? Input.touches[0].fingerId : -1);
 
             if (Input.GetKeyDown(KeyCode.LeftControl))
             {
                 inputBlocker.gameObject.SetActive(true);
                 mode = true;
             }
-
-            bool inUI = EventSystem.current.IsPointerOverGameObject();
-            bool inUIMobile = EventSystem.current.IsPointerOverGameObject(Input.touchCount > 0 ? Input.touches[0].fingerId : -1);
-
-            if ((inUI || inUIMobile) && !InputBlockerHovered)
-                return;
 
             // If the user is zooming, orbiting or panning we calculate their position
 
@@ -205,12 +202,18 @@ namespace _Project.Scripts
             }
 
             // zoom for mobile
-            if (Input.touchCount == 2 && (
+            if (zoomMobile && (
                 (Input.touches[0].deltaPosition.y > 0 && Input.touches[1].deltaPosition.y < 0) ||
                 (Input.touches[0].deltaPosition.y < 0 && Input.touches[1].deltaPosition.y > 0) ||
                 (Input.touches[0].deltaPosition.x > 0 && Input.touches[1].deltaPosition.x < 0) ||
                 (Input.touches[0].deltaPosition.x < 0 && Input.touches[1].deltaPosition.x > 0)))
             {
+                if (Input.touchCount != 2)
+                {
+                    zoomMobile = false;
+                    return;
+                }
+
                 float xTouch1;
                 float xTouch2;
                 float yTouch1;
@@ -236,7 +239,6 @@ namespace _Project.Scripts
                     xTouch2 = Input.touches[0].deltaPosition.x;
                 }
 
-
                 distance -= ((yTouch1 - yTouch2) + (xTouch1 - xTouch2)) / 1.5f * ZoomSpeed * 0.0008f * Mathf.Abs(distance);
                 return;
             }
@@ -253,6 +255,9 @@ namespace _Project.Scripts
                 return;
             }
 
+            if ((inUI || inUIMobile) && !InputBlockerHovered)
+                return;
+
             if (mode && !Input.GetKey(KeyCode.LeftControl))
             {
                 inputBlocker.gameObject.SetActive(false);
@@ -265,6 +270,12 @@ namespace _Project.Scripts
 
             // If scrollWheel is used change zoom. This one is not exclusive.
             distance -= Input.GetAxis("Mouse ScrollWheel") * ZoomSpeed * Mathf.Abs(distance);
+
+            if (Input.touchCount == 2)
+            {
+                zoomMobile = true;
+                return;
+            }
 
 
             // If the left control is pressed and.... 
