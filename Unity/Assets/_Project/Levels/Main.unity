@@ -1705,6 +1705,10 @@ PrefabInstance:
       propertyPath: m_ChildForceExpandWidth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1749561067423395587, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 1905393655592203538, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_fontSize
       value: 50

@@ -1097,6 +1097,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1749561067423395587, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 750
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749561067423395587, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 2111999565944171208, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_text
       value: Freedom
