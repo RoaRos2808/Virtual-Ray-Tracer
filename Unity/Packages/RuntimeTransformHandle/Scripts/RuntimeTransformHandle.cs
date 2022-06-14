@@ -119,7 +119,9 @@ namespace RuntimeHandle
 
         private void GetHandle(ref HandleBase p_handle, ref Vector3 p_hitPoint)
         {
-            if (EventSystem.current.IsPointerOverGameObject())
+            bool inUI = EventSystem.current.IsPointerOverGameObject();
+            bool inUIMobile = EventSystem.current.IsPointerOverGameObject(Input.touchCount > 0 ? Input.touches[0].fingerId : -1);
+            if (inUI || inUIMobile)
                 return;
             
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

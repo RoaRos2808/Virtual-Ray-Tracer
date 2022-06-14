@@ -185,6 +185,14 @@ namespace _Project.Scripts
                 inputBlocker.gameObject.SetActive(true);
                 mode = true;
             }
+/*
+            if (Input.touchCount == 1)
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+
+                // If we hit a handle we do nothing
+                if (Physics.Raycast(ray, Mathf.Infinity, LayerMask.GetMask("Gizmos"))) return;
+            }*/
 
             // If the user is zooming, orbiting or panning we calculate their position
 
@@ -254,7 +262,6 @@ namespace _Project.Scripts
 
             if ((inUI || inUIMobile) && !InputBlockerHovered)
                 return;
-
 
             if (mode && !Input.GetKey(KeyCode.LeftControl))
             {
