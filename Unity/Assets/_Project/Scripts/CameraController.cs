@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using _Project.Ray_Tracer.Scripts;
+using RuntimeHandle;
 
 namespace _Project.Scripts
 {
@@ -14,7 +15,9 @@ namespace _Project.Scripts
         private RectTransform inputBlocker;
         public bool InputBlockerHovered { get; set; }
         public RTSceneManager rTSceneManager;
-    
+        [SerializeField]
+        private RuntimeTransformHandle transformHandle;
+
         public Transform Target;
         public float InitialDistance = 5.0f;
         public float MaxDistance = 25.0f;
@@ -33,7 +36,6 @@ namespace _Project.Scripts
         private bool orbiting = false;
         private bool panning = false;
         private bool mode = false;
-        private bool zoomMobile = false;
 
         void Start() { Initialize(); }
 
@@ -180,19 +182,19 @@ namespace _Project.Scripts
             bool inUI = EventSystem.current.IsPointerOverGameObject();
             bool inUIMobile = EventSystem.current.IsPointerOverGameObject(Input.touchCount > 0 ? Input.touches[0].fingerId : -1);
 
+            if (transformHandle._draggingHandle != null && !inUI && !inUIMobile) 
+                return;
+
+            if (!inUI && !inUIMobile && Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Moved)
+            {
+                rTSceneManager.Deselect();
+            }
+
             if (Input.GetKeyDown(KeyCode.LeftControl))
             {
                 inputBlocker.gameObject.SetActive(true);
                 mode = true;
             }
-/*
-            if (Input.touchCount == 1)
-            {
-                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-
-                // If we hit a handle we do nothing
-                if (Physics.Raycast(ray, Mathf.Infinity, LayerMask.GetMask("Gizmos"))) return;
-            }*/
 
             // If the user is zooming, orbiting or panning we calculate their position
 
@@ -299,6 +301,7 @@ namespace _Project.Scripts
                 }
             }
 
+            // Enable orbiting when double tapping -> holding second touch
             for (int i = 0; i < Input.touchCount; i++)
             {
                 if (Input.GetTouch(i).phase == TouchPhase.Began)
@@ -311,14 +314,10 @@ namespace _Project.Scripts
                 }
             }
 
-            // If an object is selected, block user from panning/orbiting
-            if (!rTSceneManager.selection.Empty)
-                return;
-
             // If the middle mouse is pressed, the arrow keys are pressed, or the device is controlled with one touch we activate panning.
             if (Input.GetMouseButtonDown(2) || Input.GetKeyDown(KeyCode.LeftArrow) ||
                 Input.GetKeyDown(KeyCode.RightArrow) ||
-                Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.touchCount == 1) 
+                Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Moved)) 
             {
                 inputBlocker.gameObject.SetActive(true);
                 panning = true;

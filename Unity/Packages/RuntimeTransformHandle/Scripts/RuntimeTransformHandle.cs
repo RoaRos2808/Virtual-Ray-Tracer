@@ -29,7 +29,7 @@ namespace RuntimeHandle
         private Vector3 _previousMousePosition;
         private HandleBase _previousAxis;
         
-        private HandleBase _draggingHandle;
+        public HandleBase _draggingHandle;
 
         private HandleType _previousType;
         private HandleAxes _previousAxes;
