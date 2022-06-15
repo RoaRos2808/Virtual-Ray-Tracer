@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 819.4338, y: -536.95544}
+  m_AnchoredPosition: {x: 819.4338, y: -544.22595}
   m_SizeDelta: {x: 1598.8676, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &64819477
@@ -222,8 +222,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 819.4338, y: -337.19614}
-  m_SizeDelta: {x: 1598.8676, y: 39.09755}
+  m_AnchoredPosition: {x: 819.4338, y: -352.04407}
+  m_SizeDelta: {x: 1598.8676, y: 37.44947}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &266590709
 MonoBehaviour:
@@ -490,7 +490,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 819.4338, y: -307.64737}
+  m_AnchoredPosition: {x: 819.4338, y: -323.31934}
   m_SizeDelta: {x: 1598.8676, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &956554176
@@ -1126,7 +1126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3770574504227641030, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 39.09755
+      value: 37.44947
       objectReference: {fileID: 0}
     - target: {fileID: 3770574504227641030, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1134,7 +1134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3770574504227641030, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -39.548775
+      value: -38.724735
       objectReference: {fileID: 0}
     - target: {fileID: 3782695335681494339, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_Name
@@ -2128,6 +2128,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Welcome
       objectReference: {fileID: 0}
+    - target: {fileID: 7217484268164782550, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 7217484268164782550, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 7296055382296025388, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2338,7 +2346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8295274377048907396, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 106.551025
+      value: 102.059586
       objectReference: {fileID: 0}
     - target: {fileID: 8295274377048907396, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2346,7 +2354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8295274377048907396, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -122.37306
+      value: -118.47926
       objectReference: {fileID: 0}
     - target: {fileID: 8334105700365270072, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: interactable
@@ -2429,6 +2437,14 @@ PrefabInstance:
         having to memorize everything in one go. Once you are ready to move on to
         the next scene you can press the "Main Menu" button in the top left to open
         the main menu and then click the "Next Level" button.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814068479164366629, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
+      propertyPath: m_fontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814068479164366629, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 8833616608997001579, guid: 60ed96064c5523b46b7a7bd67e36e6d7, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2579,8 +2595,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 819.4338, y: -566.5042}
-  m_SizeDelta: {x: 1598.8676, y: 39.09755}
+  m_AnchoredPosition: {x: 819.4338, y: -572.9507}
+  m_SizeDelta: {x: 1598.8676, y: 37.44947}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1100355109
 MonoBehaviour:
@@ -2784,7 +2800,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 819.4338, y: -185.64857}
+  m_AnchoredPosition: {x: 819.4338, y: -179.50906}
   m_SizeDelta: {x: 1598.8676, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1249853171
@@ -3221,8 +3237,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 819.4338, y: -215.19736}
-  m_SizeDelta: {x: 1598.8676, y: 39.09755}
+  m_AnchoredPosition: {x: 819.4338, y: -208.2338}
+  m_SizeDelta: {x: 1598.8676, y: 37.44947}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618098370
 MonoBehaviour:
@@ -3416,8 +3432,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 819.4338, y: -662.74335}
-  m_SizeDelta: {x: 1598.8676, y: 133.38078}
+  m_AnchoredPosition: {x: 819.4338, y: -665.5546}
+  m_SizeDelta: {x: 1598.8676, y: 127.758385}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1703648436
 MonoBehaviour:
@@ -3557,8 +3573,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 819.4338, y: -271.19675}
-  m_SizeDelta: {x: 1598.8676, y: 52.901257}
+  m_AnchoredPosition: {x: 819.4338, y: -275.13892}
+  m_SizeDelta: {x: 1598.8676, y: 76.360794}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1774322711
 MonoBehaviour:
@@ -3582,8 +3598,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'You can pan the camera by dragging your finger across the screen. You
     can zoom the camera in and out by pinching in/out with the use of  two fingers.
-    You can orbit the camera by dragging three fingers across the screen in the direction
-    you want to orbit. '
+    You can orbit the camera by double tapping the screen and holding your second
+    touch, then drag across the screen in the direction you want to orbit. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3840,8 +3856,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 819.4338, y: -446.8502}
-  m_SizeDelta: {x: 1598.8676, y: 160.21051}
+  m_AnchoredPosition: {x: 819.4338, y: -457.49738}
+  m_SizeDelta: {x: 1598.8676, y: 153.45717}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2091649063
 MonoBehaviour:

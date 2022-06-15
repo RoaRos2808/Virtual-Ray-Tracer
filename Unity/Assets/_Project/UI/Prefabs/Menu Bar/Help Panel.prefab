@@ -1973,8 +1973,8 @@ PrefabInstance:
       propertyPath: m_text
       value: "You can pan the camera by dragging your finger across the screen.\n\nYou
         can zoom the camera in and out by pinching in/out with the use of two fingers.
-        \n\nYou can orbit the camera by dragging three fingers across the screen
-        in the direction you want to orbit. "
+        \n\nYou can orbit the camera by double tapping the screen and holding your
+        second touch, then drag across the screen in the direction you want to orbit. "
       objectReference: {fileID: 0}
     - target: {fileID: 3712290806099628232, guid: 4492db671b458b745b5c53fefa725067, type: 3}
       propertyPath: m_fontSize
